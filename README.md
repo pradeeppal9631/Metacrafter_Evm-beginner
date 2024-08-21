@@ -50,7 +50,6 @@ It takes an address account, uint256 value as parameters.
         tokenTotalSupply -= value;
         tokenBalances[account] -= value;
     }
-
-    ## Usage
-    To use this contract, you need to deploy it on a compatible Ethereum Virtual Machine (EVM) blockchain network, such as Ethereum. Once deployed, you can interact with the contract using the provided functions.
+## Usage
+To use this contract, you need to deploy it on a compatible Ethereum Virtual Machine (EVM) blockchain network, such as Ethereum. Once deployed, you can interact with the contract using the provided functions.
     

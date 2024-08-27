@@ -45,10 +45,10 @@ Pagma Solidity version of 0.8.18 or higher
 +'burn(address account, uint256 value)':A public function used to burn existing tokens.Reduces the total supply by the specified value.
 It takes an address account, uint256 value as parameters.
 ```solidity
- function burn(address account, uint256 value) public{
-        require(tokenBalances[account] >= value, "Insufficient balance");
-        tokenTotalSupply -= value;
-        tokenBalances[account] -= value;
+  function burn(address addr, uint256 _value) public {
+        require(balance[addr] >= _value, "Insufficient balance to burn");
+        totalSupply -= _value;
+        balance[addr] -= _value;                                                //decreased balance
     }
     
 ```

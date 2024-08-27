@@ -35,9 +35,9 @@ Pagma Solidity version of 0.8.18 or higher
 ### Functions
 + 'function mint(address account, uint256 value)': A public function used to mint new tokens. It takes an address _to and a uint _value as parameters. The function increases the total salary by _value and adds the same amount to the token balance of the specified _to.
 ```solidity
- function mint(address account, uint256 value) public {
-        tokenTotalSupply += value;
-        tokenBalances[account] += value;
+ function mint(address addr, uint256 _value) public {
+        totalSupply += _value;
+        balance[addr] += _value;                                  //increased balance
     }
     
 ```

@@ -24,17 +24,13 @@ Pagma Solidity version of 0.8.18 or higher
 
 ### Constructer
 + Initializes the token name, symbol, and total supply.it assigns the initial salary to the address that deployed the contract, setting up the initial state of the contract.
-+ It takes three parameters _tokenName; _tokenSymbol _tokenTotalSupply;
++ It takes  parameters string memory _name, string memory _abbrv 
 
 ```solidity
-constructor(string memory _tokenName, string memory _tokenSymbol, uint256 _tokenTotalSupply) {
-
-        tokenName = _tokenName;
-        tokenSymbol = _tokenSymbol;
-        tokenTotalSupply = _tokenTotalSupply;
-        tokenBalances[msg.sender] = _tokenTotalSupply; // Assign all tokens to contract deployer initially
+ constructor(string memory _name, string memory _abbrv) {
+        tokenName = _name;
+        tokenAbbrv = _abbrv;
     }
-
 ```
 ### Functions
 + 'function mint(address account, uint256 value)': A public function used to mint new tokens. It takes an address _to and a uint _value as parameters. The function increases the total salary by _value and adds the same amount to the token balance of the specified _to.
